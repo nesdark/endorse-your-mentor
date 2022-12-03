@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --dark-blue: #293241;
+  --gray: #bfd7e4;
+  --red: #f67669;
+
+  --title-font: "Staatliches", sans-serif;
+  --paragraph-font: "Poppins", sans-serif;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: var(--paragraph-font);
+}
+
+body {
+  background-color: var(--gray);
+  padding-bottom: 10.2rem;
+
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--title-font);
+}
+
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+}
+/* ----------------- HEADER ------------------ */
+header {
+  color: white;
+
+  background-color: #293241;
+
+  padding-top: 3.2rem;
+  text-align: center;
+
+  font-size: 1.5rem;
+}
+
+header p {
+  font-family: var(--paragraph-font);
+  font-size: 1.5rem;
+  line-height: 3.4rem;
+
+  margin-bottom: 2.8rem;
+}
+
+header img {
+  margin-bottom: 3.2rem;
+  width: 22.5rem;
+}
+
+header .form-title {
+  padding-block: 5rem;
+  background-color: var(--red);
+  border-radius: 2rem 2rem 0 0;
+}
+
+/* ------------ MAIN ----------------------------- */
+main {
+  background-color: white;
+
+  padding-top: 3.1rem;
+  padding-inline: 6.4rem;
+  padding-bottom: 6.4rem;
+
+  border-radius: 0 0 2rem 2rem;
+}
+
+form fieldset {
+  border: none;
+
+  margin-bottom: 3.1rem;
+}
+
+form fieldset > div {
+  margin-bottom: 1.8rem;
+}
+
+form fieldset legend {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 3.1rem;
+
+  border-bottom: 1px solid #e6e6f0;
+
+  padding-bottom: 5px;
+
+  color: #253b51;
+}
+
+form fieldset legend h2 {
+  font-size: 2.4rem;
+  line-height: 142%;
+}
+
+form fieldset .container {
+  display: flex;
+  gap: 2.2rem;
+}
+
+form fieldset .container > div {
+  width: 100%;
+}
+
+form label {
+  font-size: 1.4rem;
+  line-height: 171%;
+
+  color: #4e4958;
+}
+
+form label small {
+  color: #c1bccc;
+}
+
+form label:hover small {
+  color: hsl(259, 14%, 27%);
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+
+  background: #fafafc;
+
+  border: 1px solid #e6e6f0;
+  border-radius: 0.8rem;
+
+  font-size: 1.4rem;
+  padding: 1.5rem 2.4rem;
+}
+
+form .select-mentor {
+  max-width: 30rem;
+}
+
+form .select-mentor select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.96633L9 1' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+
+  background-position: right 2.4rem center;
+}
+
+form .feedback {
+  width: 100%;
+}
+
+form textarea {
+  height: 16.6rem;
+
+  resize: none;
+}
+
+form .all-questions input {
+  top: auto;
+  left: auto;
+}
+
+form .all-questions label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+form .all-questions label::before {
+  content: "";
+  width: 24px;
+  height: 2.4rem;
+
+  display: inline-block;
+
+  background: #fafafc;
+  border: 1px solid #e6e6f0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+form .all-questions input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_941_20)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%23F67669'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_941_20'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+
+  background-position: top 0.2rem center;
+}
+
+form .all-questions input:focus + label::before {
+  outline: 2px solid black;
+}
+
+form fieldset#next-mentorship .container,
+form fieldset#next-mentorship .container {
+  flex-direction: column;
+}
+
+form button {
+  width: 100%;
+
+  padding: 1.25rem;
+
+  background: #f67669;
+
+  border: none;
+  border-radius: 0.8rem;
+
+  font-size: 2rem;
+  line-height: 130%;
+
+  color: #ffffff;
+}
+
+form button:hover {
+  background: #fd978c;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 425px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  main {
+    margin-inline: 2rem;
+  }
+}
+
+@media screen and (min-width: 633px) {
+  form fieldset#next-mentorship .container,
+  form fieldset#next-mentorship .container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 787px) {
+  header .form-title,
+  main {
+    max-width: 75rem;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    padding-top: 5.35rem;
+  }
+
+  header h1 {
+    font-size: 3.6rem;
+  }
+
+  header p {
+    font-family: var(--paragraph-font);
+    line-height: 2.4rem;
+
+    margin-bottom: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1154px) {
+  header {
+    padding-top: 10.7rem;
+  }
+}

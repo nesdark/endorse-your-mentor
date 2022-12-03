@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avalie sua mentoria</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Avalie a sua mentoria</h1>
+        <p>Chegou a hora de avaliar</p>
+        <img
+          src="./images/endorse.svg"
+          alt="Caixa vermelha de diálogo com três estrelas brancas de cinco"
+        />
+        <div class="form-title">
+          <h2>Personal information</h2>
+        </div>
+      </header>
+      <main>
+        <form action="/">
+          <fieldset>
+            <div class="legend sr-only">
+              <legend>Informações Pessoais</legend>
+            </div>
+
+            <div class="container">
+              <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" pattern="\D{1,100}" required />
+              </div>
+              <div class="last-name">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  pattern="\D{1,100}"
+                  required
+                />
+              </div>
+            </div>
+            <div class="email">
+              <label for="email">
+                Email
+                <small>(enter a valid e-mail)</small>
+              </label>
+              <input type="email" id="email" required />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h2>Mentor Information</h2>
+            </legend>
+            <div class="select-mentor">
+              <label for="mentor-name">Select who was your mentor</label>
+              <select id="mentor-name" required>
+                <option></option>
+                <option value="mayk">Mayk Brito</option>
+                <option value="diego">Diego Fernandes</option>
+                <option value="rodrigo">Rodrigo Gonçalves</option>
+                <option value="jakeliny">Jakeliny Gracielly</option>
+              </select>
+            </div>
+
+            <div class="feedback">
+              <label for="feedback">FeedBack about mentor</label>
+              <textarea id="feedback"></textarea>
+            </div>
+            <div class="all-questions">
+              <input type="checkbox" id="all-questions" class="sr-only" />
+              <label for="all-questions"
+                >Todas as minhas dúvidas foram esclarecidas durante a
+                mentoria.</label
+              >
+            </div>
+          </fieldset>
+
+          <fieldset id="next-mentorship">
+            <legend>
+              <h2>Marking the next mentorship</h2>
+            </legend>
+            <div class="container">
+              <div class="data">
+                <label for="date"
+                  >Date
+                  <small>(DD/MM/YYYY)</small>
+                </label>
+                <input type="date" id="date" />
+              </div>
+              <div class="time container">
+                <div class="from">
+                  <label for="from">From</label>
+                  <input type="time" id="from" />
+                </div>
+                <div class="to">
+                  <label for="to">To</label>
+                  <input type="time" id="to" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Save</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
